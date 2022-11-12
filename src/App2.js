@@ -1,8 +1,9 @@
 
 import './App.css';
+
 import { Link} from "react-router-dom"
 
-function App() {
+function App2() {
   return (
 
     <div className="">
@@ -10,11 +11,12 @@ function App() {
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       {/* <!-- NAVBAR --> */}
           <div className="container">
-            <Link to="/index" className="navbar-brand">
+          <Link to="/index" className="navbar-brand">
 
-                Gestion Paquetes
+            Gestion Paquetes
 
             </Link>
+
             <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -116,4 +118,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;

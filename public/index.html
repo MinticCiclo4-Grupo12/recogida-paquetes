@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,7 +16,14 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recogida de paquetes</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="%PUBLIC_URL%/static/style/style.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +38,114 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+     <!-- Modal trigger button --> 
+    
+     <!-- Modal Body --> 
+     <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard --> 
+     <!-- MODAL 1 --> 
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId"><b>Gestion paquetes |</b> Inicio sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Usuario </label>
+                            <input type="text" name="" id="validationCustom01" class="form-control" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Contraseña </label>
+                            <input type="password" name="" id="validationCustom01" class="form-control" required/>
+                        </div>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <a href="#modalId2" class="text-decoration-none" data-bs-toggle="modal">Registrar un nuevo usuario</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Iniciar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- MODAL 1 --> 
+     <!-- MODAL 2 --> 
+    <div class="modal fade" id="modalId2" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId"><b>Gestion paquetes |</b> Registrar usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Nombres </label>
+                            <input type="text" name="" id="validationCustom01" class="form-control" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Usuario </label>
+                            <input type="text" name="" id="validationCustom01" class="form-control" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Contraseña </label>
+                            <input type="password" name="" id="validationCustom01" class="form-control" required/>
+                        </div>
+                        <div class="mb-3">
+                            <label for="validationCustom01" class="form-label">Confirmar contraseña </label>
+                            <input type="password" name="" id="validationCustom01" class="form-control" required/>
+                        </div>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <a href="#modalId" class="text-decoration-none" data-bs-toggle="modal">Ya tengo una cuenta</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- MODAL 2 --> 
+     <!-- Modal Body --> 
+
+     <!-- Optional: Place to the bottom of scripts --> 
+    <script>
+        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+        const myModal2 = new bootstrap.Modal(document.getElementById('modalId2'), options)
+    
+    </script>
+
+         <!-- JavaScript Bundle with Popper --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+        (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+    })()
+    </script>
   </body>
 </html>

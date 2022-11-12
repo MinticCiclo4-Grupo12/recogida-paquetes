@@ -2,12 +2,33 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import App2 from './App2';
+import ListaOrdenes from './ListaOrdenes';
+import RegistroEnvios from './RegistroEnvios';
+import ActualizacionEnvios from './ActualizacionEnvios';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+
+      <Routes>
+
+        <Route exact path="/" element={<App/>} />
+
+        <Route path="/index" element={<App2/>} />
+
+        <Route path="/ListaOrdenes" element={<ListaOrdenes/>} />
+
+        <Route path="/RegistroEnvios" element={<RegistroEnvios/>} />
+
+        <Route path="/ActualizacionEnvios" element={<ActualizacionEnvios/>} />
+
+      </Routes>
+
+    </Router>
   </React.StrictMode>
 );
 
